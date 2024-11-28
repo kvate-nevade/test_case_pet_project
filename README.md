@@ -1,6 +1,6 @@
 <h1>Pet project</h1>
-</br>
 This is the beginning of the magnum opus of the course from the Stepik.
+</br>
 link page: https://stepik.org/course/575
 
 В этом модуле мы создадим с нуля полноценный тестовый проект, который будет являться вашим финальным заданием. Для этого будем использовать популярные в индустрии инструменты Git и GitHub, с которыми в общих чертах мы познакомились в предыдущем модуле. 
