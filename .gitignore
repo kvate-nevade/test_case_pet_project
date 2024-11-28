@@ -1,3 +1,5 @@
 sandbox*
 config.json
-pycache*
+__pycache__/
+.pytest_cache/
+requirements.txt
