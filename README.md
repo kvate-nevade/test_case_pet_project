@@ -1,4 +1,4 @@
-#Pet project
+<h1>Pet project</h1>
 
 This is the beginning of the magnum opus of the course from the Stepik.
 link page: https://stepik.org/course/575
