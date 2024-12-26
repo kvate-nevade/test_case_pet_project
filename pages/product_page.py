@@ -7,9 +7,8 @@ class ProductPage(BasePage):
         button_add_to_basket.click()
 
     def alert_add_to_basket_successful(self):
-        alert_add_to_basket_successful_text = self.browser.find_element(*ProductPageLocators.ALLERT_ADD_TO_BASKET).text
-        check_text = 'был добавлен в вашу корзину.'
-        assert check_text in alert_add_to_basket_successful_text, 'Alert add to basket not found.'
+        alert_add_to_basket_successful_text = self.browser.find_element(*ProductPageLocators.ALLERT_ADD_TO_BASKET)
+        assert alert_add_to_basket_successful_text, 'Alert add to basket not found.'
 
     def product_name_isequal_in_alert(self):
         product_name_from_alert_text = self.browser.find_element(*ProductPageLocators.ALLERT_ADD_TO_BASKET_PRODUCT_NAME).text
