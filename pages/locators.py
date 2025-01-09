@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, '#login_link')
-
+    BASKET_BUTTON = (By.CSS_SELECTOR, '.btn-group a.btn')
 
 class LoginPageLocators():
     LOGIN_FORM = (By.CSS_SELECTOR, '#login_form')
@@ -18,3 +18,6 @@ class ProductPageLocators():
     ALLERT_COSTS_OF_BASKET = (By.CSS_SELECTOR, '.alert-info strong')
     ALLERT_COSTS_OF_BASKET_NUMBER = (By.CSS_SELECTOR, '.alert-info strong')
 
+class BasketPageLocators():
+    TEXT_BASKET_IS_EMPTY = (By.CSS_SELECTOR, '#content_inner > p')
+    BASKET_FORM = (By.CSS_SELECTOR, '#basket_formset')
