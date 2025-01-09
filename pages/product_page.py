@@ -23,3 +23,12 @@ class ProductPage(BasePage):
         cost_goods_in_alert = self.browser.find_element(*ProductPageLocators.ALLERT_COSTS_OF_BASKET_NUMBER).text
         cost_good_in_card = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE).text
         assert cost_goods_in_alert == cost_good_in_card, 'Cost goods in alert is not equal cost in card.'
+    
+    def should_not_be_alert_add_to_basket(self):
+        assert self.is_not_element_present(*ProductPageLocators.ALLERT_ADD_TO_BASKET), \
+        "Success message is presented, but should not be"
+
+    def should_be_is_disappear_add_to_basket(self):
+        assert self.is_disappeared(*ProductPageLocators.ALLERT_ADD_TO_BASKET), \
+        "Success message is not presented, but should be"
+    

@@ -18,4 +18,3 @@ class ProductPageLocators():
     ALLERT_COSTS_OF_BASKET = (By.CSS_SELECTOR, '.alert-info strong')
     ALLERT_COSTS_OF_BASKET_NUMBER = (By.CSS_SELECTOR, '.alert-info strong')
 
-
