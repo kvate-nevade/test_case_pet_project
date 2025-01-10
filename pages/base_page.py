@@ -71,4 +71,7 @@ class BasePage:
     def go_to_basket(self):
         basket_button = self.browser.find_element(*BasePageLocators.BASKET_BUTTON)
         basket_button.click()
-        
+
+
+    def is_logged_in(self):
+        assert self.is_element_present(*BasePageLocators.USER_ICON), 'User is not logged in'
