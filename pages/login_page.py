@@ -24,8 +24,10 @@ class LoginPage(BasePage):
         assert self.browser.find_element(*LoginPageLocators.REGISTER_FORM), 'Form of register should be present'
 
     def register_new_user(self, 
-                          email = f'email32165{str(time.time())}{faker.Faker().email()}',
+                          email = None,
                           password = 'eda22d0fjg7ghf82q30g9rh'):
+        if email is None:
+            email = f'thisismyemail_{str(time.time())}_{faker.Faker().email()}'
         email_field = self.browser.find_element(*LoginPageLocators.REGISTER_EMAIL_FIELD)
         email_field.send_keys(email)
         password_field_1 = self.browser.find_element(*LoginPageLocators.REGISTER_FIRST_PASSWORD)
@@ -34,4 +36,3 @@ class LoginPage(BasePage):
         password_field_2.send_keys(password)
         register_button = self.browser.find_element(*LoginPageLocators.REGISTER_BUTTON)
         register_button.click()
-        print('Registration was successful')

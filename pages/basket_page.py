@@ -3,7 +3,7 @@ from .locators import BasketPageLocators
 
 class BasketPage(BasePage):
     def basket_contains_text_about_its_empty(self):
-        content_container = self.browser.find_element(*BasketPageLocators.TEXT_CONTAINER)
+        content_container = self.browser.find_element(*BasketPageLocators.TEXT_BASKET_IS_EMPTY)
         assert content_container, 'Basket should be contains text about its empty'
 
 
